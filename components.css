@@ -1,0 +1,197 @@
+/* components.css - Reusable UI components */
+.page-section {
+  display: none;
+  animation: fadeSlide 0.3s ease;
+}
+
+.page-section.active-page {
+  display: block;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Buttons */
+.btn {
+  padding: 14px 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 2px solid;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  border-color: #ff2a7f;
+  color: #ffb3d9;
+  box-shadow: 0 0 15px #ff2a7f55;
+}
+
+.btn-primary:hover {
+  background: #ff2a7f;
+  color: black;
+  box-shadow: 0 0 35px #ff2a7f;
+}
+
+.btn-outline {
+  border-color: #0ff;
+  color: #b1ffff;
+}
+
+.btn-outline:hover {
+  background: #0ff;
+  color: #0b0c0e;
+  box-shadow: 0 0 25px cyan;
+}
+
+.btn-street-solid {
+  background: #ffcc00;
+  border: 3px solid #ffcc00;
+  color: #0a0a0a;
+  font-family: 'Bangers', cursive;
+  font-size: 1.3rem;
+  padding: 12px 30px;
+  box-shadow: 5px 5px 0 #b3002d;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.btn-street-solid:hover {
+  background: #ff4444;
+  border-color: #ff4444;
+  color: white;
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #ffcc00;
+}
+
+/* Cards */
+.card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.card-cyber {
+  background: #0e1419e0;
+  backdrop-filter: blur(8px);
+  border: 1px solid #0ff5;
+}
+
+.card-street {
+  background: #181818;
+  border: 3px solid #ffcc00;
+  box-shadow: 8px 8px 0 #000;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.badge-cyber {
+  background: #ff2a7f22;
+  border: 1px solid #ff2a7f;
+  color: #ffb0d0;
+}
+
+.badge-street {
+  background: #ffcc0022;
+  border: 2px solid #ffcc00;
+  color: #ffd966;
+}
+
+/* Image frames */
+.image-frame-cyber {
+  background: #030608;
+  padding: 10px;
+  border: 2px solid #2effaf;
+  box-shadow: 10px 10px 0 #0a0f12, 0 0 40px #00a6ff4d;
+}
+
+.image-frame-street {
+  background: #1a1a1a;
+  padding: 15px;
+  border: 4px solid #ffcc00;
+  box-shadow: 10px 10px 0 #000;
+  transform: rotate(-1deg);
+}
+
+/* ASCII / Glitch elements */
+.ascii-art {
+  font-family: monospace;
+  color: #1affb2;
+  opacity: 0.6;
+  font-size: 0.7rem;
+  line-height: 1.2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Navigation tabs */
+.nav-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: #1a1a1a;
+  border: 3px solid #333;
+  color: #ddd;
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  padding: 12px 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 0.15s;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.tab-btn:hover {
+  border-color: #ffcc00;
+  color: #ffcc00;
+}
+
+.tab-btn.active {
+  background: #ffcc00;
+  border-color: #ffcc00;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px #ffcc00aa;
+}
+
+/* Grid layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
